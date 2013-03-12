@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <article class="skill-list">
+        <header><h3>Skill list test</h3></header>
+        <div class="content">
+        {% if skills %}
+            <p>There are {{ skills.skill_count }} skills and {{ skills.group_count }} groups in total.</p>
+            <ul class="expandable">
+            {% for groupID, group in skills.tree.iteritems() %}
+                <li>
+                    <header id="skill-group-{{ groupID }}" class="skill-group">{{ group.name }}: {{ group.count }} skills</header>
+                    <ul>
+                    {% for skillID, name in group.skills.iteritems() %}
+                        <li id="skill-{{ skillID }}"><strong>{{ name }}</strong></li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No skills found!</p>
+        {% endif %}
+        </div>
+    </article>
+{% endblock %}
