@@ -6,15 +6,10 @@ import re
 class Parser(object):
 
     # Passing these methods to make it easier defining classes in da future
-
     def __init__(self): pass
-
     def start(self, tag, attrib): pass
-
     def close(self): pass
-
     def data(self, data): pass
-
     def end(self, tag): pass
 
 
