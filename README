@@ -12,6 +12,6 @@ An application for funking with EVE data
 
 4. mongod &
 
-5. python adam/adam.py
+5. python adam/routes.py
 
 6. http://localhost:5000
