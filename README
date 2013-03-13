@@ -1,0 +1,6 @@
+Requires:
+    Python 2.7
+        flask
+        mongoengine
+        flask_mongoengine
+    MongoDB 2.2.3

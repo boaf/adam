@@ -1,4 +1,11 @@
-make shit awesome
-eve api storage
-mongodb stuff?
-fix this thingy.
+BACKEND
+- eve api storage/caching w/ mongodb
+    - poll ...
+        ... once per day for generic EVE data (i.e. EVE_API_EVE* calls)
+        ... once every five (?) minutes for data requiring API key (i.e. EVE_API_Corporation*, EVE_API_Character* calls)
+        ... (or on forced refresh by the user)
+
+FRONTEND
+- define general principals to follow
+- fonts
+- colors
