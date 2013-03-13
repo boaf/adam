@@ -1,5 +1,5 @@
 import datetime
-from app import db
+from adam import db
 
 from eve_api import SkillTreeParser, eve_parser
 

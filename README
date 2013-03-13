@@ -2,13 +2,16 @@ Adam
 An application for funking with EVE data
 
 
-1. Install MongoDB
-2. Install pip
-3. Make a virtualenv for this project
-4. Install the dependencies
-    pip install -r requirements.txt
-5. Run MongoDB
-    mongod
-6. Run Adam
-    python adam.py
-7. Goto http://localhost:5000
+0. http://docs.mongodb.org/manual/installation/
+
+1. git clone eve@thescoundrels.net:~/code/adam adam_project
+
+2. virtualenv adam_project
+
+3. cd adam_project && . bin/activate && pip install -r requirements.txt
+
+4. mongod &
+
+5. python adam/adam.py
+
+6. http://localhost:5000
