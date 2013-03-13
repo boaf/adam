@@ -1,8 +1,10 @@
-from flask import Flask, render_template
+import os,sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from eveapi import eve_parser, SkillTreeParser
 
-app = Flask(__name__)
+from app import app
+from flask import render_template
 
 @app.route('/')
 def home():

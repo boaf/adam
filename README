@@ -1,6 +1,14 @@
-Requires:
-    Python 2.7
-        flask
-        mongoengine
-        flask_mongoengine
-    MongoDB 2.2.3
+Adam
+An application for funking with EVE data
+
+
+1. Install MongoDB
+2. Install pip
+3. Make a virtualenv for this project
+4. Install the dependencies
+    pip install -r requirements.txt
+5. Run MongoDB
+    mongod
+6. Run Adam
+    python adam.py
+7. Goto http://localhost:5000
