@@ -1,10 +1,24 @@
 import xml.etree.ElementTree as ET
-
 from urllib2 import urlopen
-
 import re
 
-class SkillTreeParser(object):
+
+class Parser(object):
+
+    # Passing these methods to make it easier defining classes in da future
+
+    def __init__(self): pass
+
+    def start(self, tag, attrib): pass
+
+    def close(self): pass
+
+    def data(self, data): pass
+
+    def end(self, tag): pass
+
+
+class SkillTreeParser(Parser):
     feed = 'https://api.eveonline.com/eve/SkillTree.xml.aspx'
 
     skill_count = 0
@@ -33,9 +47,6 @@ class SkillTreeParser(object):
             'skill_count': self.skill_count,
             'group_count': len(self.tree)
         }
-
-    def data(self, data): pass
-    def end(self, tag): pass
 
 
 def eve_parser(target):

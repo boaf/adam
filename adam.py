@@ -1,10 +1,9 @@
 import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from eveapi import eve_parser, SkillTreeParser
-
 from app import app
 from flask import render_template
+from models import SkillTreeDocument
 
 @app.route('/')
 def home():
@@ -12,7 +11,7 @@ def home():
 
 @app.route('/skills')
 def skills():
-    skills = eve_parser(SkillTreeParser)
+    skills = SkillTreeDocument().get_skills()
     return render_template('skills.html', skills=skills)
 
 @app.route('/humans.txt')
