@@ -31,7 +31,7 @@ class SkillTreeParser(Parser):
                     'count': 0
                 }
 
-        if 'typeName' in attrib:
+        elif 'typeName' in attrib:
             self.tree[attrib['groupID']]['skills'][attrib['typeID']] = attrib['typeName']
             self.skill_count += 1
             self.tree[attrib['groupID']]['count'] += 1
