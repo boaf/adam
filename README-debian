@@ -1,0 +1,14 @@
+Adam
+An application for funking with EVE data
+
+1. git clone eve@thescoundrels.net:~/code/adam
+
+2. virtualenv adam/
+
+3. . adam/setup/debian-prereq.sh
+
+5. . adam/bin/activate; . adam/setup/debian-venv-setup.sh
+
+6. python run.py
+
+7. http://localhost:5000
