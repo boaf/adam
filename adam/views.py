@@ -1,6 +1,10 @@
-from adam import app
 from flask import render_template
-from eve_api import SkillTree
+
+from adam import app
+from adam.cache import Cache
+import eveapi
+
+api = eveapi.EVEAPIConnection(cacheHandler=Cache(debug=True))
 
 @app.route('/')
 @app.route('/home')
@@ -9,7 +13,7 @@ def home():
 
 @app.route('/skills')
 def skills():
-    return render_template('skills.html', skills=SkillTree().get_skills())
+    return render_template('skills.html', skilltree=api.eve.SkillTree())
 
 @app.route('/humans.txt')
 def humans_txt():
