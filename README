@@ -8,7 +8,7 @@ An application for funking with EVE data
 
 2. virtualenv adam_project
 
-3. cd adam_project && . bin/activate && pip install -r requirements.txt
+3. cd adam_project && . bin/activate && pip install -r ../requirements.txt
 
 4. mongod &
 
