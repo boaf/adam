@@ -1,5 +1,10 @@
+from adam.db import db_session
+from adam.models import Skill, SkillGroup
+
 import xml.etree.ElementTree as ET
+
 from urllib2 import urlopen
+
 import re
 
 
@@ -36,6 +41,7 @@ class SkillTreeParser(Parser):
             self.skill_count += 1
             self.tree[attrib['groupID']]['count'] += 1
 
+
     def close(self):
         return {
             'tree': self.tree,
@@ -44,7 +50,9 @@ class SkillTreeParser(Parser):
         }
 
 
-def eve_parser(target):
-    parser = ET.XMLParser(target=target())
-    parser.feed(urlopen(target.feed).read())
-    return parser.close()
+class SkillTree(object):
+
+    def get_skills(self):
+        parser = ET.XMLParser(target=SkillTreeParser())
+        parser.feed(urlopen(SkillTreeParser.feed).read())
+        return parser.close()

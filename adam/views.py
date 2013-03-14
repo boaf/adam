@@ -1,9 +1,6 @@
-import os,sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from adam import app
 from flask import render_template
-from models import SkillTreeDocument
+from eve_api import SkillTree
 
 @app.route('/')
 @app.route('/home')
@@ -12,14 +9,10 @@ def home():
 
 @app.route('/skills')
 def skills():
-    skills = SkillTreeDocument().get_skills()
-    return render_template('skills.html', skills=skills)
+    return render_template('skills.html', skills=SkillTree().get_skills())
 
 @app.route('/humans.txt')
 def humans_txt():
     response = app.make_response(open('static/humans.txt').read())
     response.content_type = "text/plain"
     return response
-
-if __name__ == '__main__':
-    app.run(debug=True)

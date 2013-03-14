@@ -1,4 +1,4 @@
-  PYTHON
+# PYTHON
 ##########
 
 *.py[cod]
@@ -19,7 +19,7 @@ lib64
 __pycache__
 
 
-  MAC OS X
+# MAC OS X
 ############
 
 .DS_Store
@@ -31,7 +31,7 @@ Icon
 .Trashes
 
 
-  WINDOWS
+# WINDOWS
 ###########
 
 Thumbs.db
@@ -40,7 +40,7 @@ Desktop.ini
 $RECYCLE.BIN/
 
 
-  VIRTUALENV
+# VIRTUALENV
 ##############
 
 .Python
@@ -48,3 +48,9 @@ $RECYCLE.BIN/
 [Ii]nclude
 [Ll]ib
 [Ss]cripts
+
+
+# OTHER
+#########
+
+*.db
