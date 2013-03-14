@@ -15,7 +15,8 @@ def home():
 
 @app.route('/skills')
 def skills():
-    return render_template('skills.html', skilltree=api.eve.SkillTree())
+    skilltree = api.eve.SkillTree()
+    return render_template('skills.html', skilltree=skilltree)
 
 @app.route('/humans.txt')
 def humans_txt():

@@ -15,7 +15,7 @@
 #
 #----------------------------------------------------------------------------
 # Put your userID and apiKey (full access) here before running this script.
-YOUR_KEYID = 123456
+YOUR_KEYID = 0123456
 YOUR_VCODE = "nyanyanyanyanyanyanyanyanyanyanyanyanyanyanyanyanyanya:3"
 
 import time
@@ -26,7 +26,7 @@ import os
 from os.path import join, exists
 from httplib import HTTPException
 
-import eveapi
+from adam import eveapi
 
 api = eveapi.EVEAPIConnection()
 
