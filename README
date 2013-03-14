@@ -8,8 +8,8 @@ In Debian:
 
 2. virtualenv adam
 
-3. cd adam && . bin/activate && pip install -r requirements.txt
+3. . adam/bin/activate && pip install -r requirements.txt
 
-4. python adam/routes.py
+4. python run.py
 
 5. http://localhost:5000
