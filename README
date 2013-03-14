@@ -1,15 +1,13 @@
 Adam
 An application for funking with EVE data
 
-This assumes that adam and adam_project are side by side.
-
 0. http://docs.mongodb.org/manual/installation/
 
 1. git clone eve@thescoundrels.net:~/code/adam adam_project
 
 2. virtualenv adam_project
 
-3. cd adam_project && . bin/activate && pip install -r ../requirements.txt
+3. cd adam_project && . bin/activate && pip install -r requirements.txt
 
 4. mongod &
 
