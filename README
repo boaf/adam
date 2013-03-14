@@ -2,16 +2,12 @@ Adam
 An application for funking with EVE data
 
 
-0. http://docs.mongodb.org/manual/installation/
-
 1. git clone eve@thescoundrels.net:~/code/adam
 
 2. virtualenv adam
 
 3. cd adam && . bin/activate && pip install -r requirements.txt
 
-4. mongod &
+4. python adam/routes.py
 
-5. python adam/routes.py
-
-6. http://localhost:5000
+5. http://localhost:5000

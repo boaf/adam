@@ -1,3 +1,2 @@
 flask
-mongoengine
-flask_mongoengine
+flask-mysql
