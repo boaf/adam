@@ -3,14 +3,18 @@ An application for funking with EVE data
 
 0. http://docs.mongodb.org/manual/installation/
 
-1. git clone eve@thescoundrels.net:~/code/adam adam_project
+1. git clone eve@thescoundrels.net:~/code/adam
 
-2. virtualenv adam_project
+2. virtualenv adam
 
+<<<<<<< HEAD
 3. cd adam_project && . bin/activate && pip install -r requirements.txt
+=======
+3. cd adam && . bin/activate && pip install -r requirements.txt
+>>>>>>> This should do it...
 
 4. mongod &
 
-5. python ../adam/routes.py
+5. python adam/routes.py
 
 6. http://localhost:5000
