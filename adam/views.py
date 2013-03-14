@@ -1,3 +1,5 @@
+import os
+
 from flask import render_template
 
 from adam import app
@@ -17,6 +19,6 @@ def skills():
 
 @app.route('/humans.txt')
 def humans_txt():
-    response = app.make_response(open('static/humans.txt').read())
+    response = app.make_response(open(os.path.dirname(os.path.realpath(__file__)) + '/../AUTHORS').read())
     response.content_type = "text/plain"
     return response
