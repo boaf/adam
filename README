@@ -7,6 +7,6 @@ An application for funking with EVE data
 
 3. . adam/bin/activate && pip install -r setup/requirements.txt
 
-4. python run.py
+4. python adam/run.py
 
 5. http://localhost:5000
