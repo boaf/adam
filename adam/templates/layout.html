@@ -3,32 +3,45 @@
 <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Adam</title>
+
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='less/style.less') }}">
+    <link rel="stylesheet/less" href="{{ url_for('static', filename='less/style.less') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
 
 </head>
 
 <body>
 
-    <header id="banner">
-        <h1>Adam</h1>
-        <nav>
-            <ul>
-                <li><a {% if request.path == '/home' or request.path == '/' %}class="active" {% endif %}href="{{ url_for('home') }}">Home</a></li>
-                <li><a {% if request.path == '/skills' %}class="active" {% endif %}href="{{ url_for('skills') }}">Skill List Test</a></li>
-            </ul>
-        </nav>
-        <div style="clear:both"></div>
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="{{ url_for('home') }}">Adam</a>
+                <nav class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li{% if request.path == '/home' or request.path == '/' %} class="active"{% endif %}><a href="{{ url_for('home') }}">Home</a></li>
+                        <li{% if request.path == '/skills' %} class="active"{% endif %}><a href="{{ url_for('skills') }}">Skill List Tree</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <section id="content">
+    <section class="container">
         {% block content %}
         {% endblock %}
     </section>
 
     <script src="{{ url_for('static', filename='js/less.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/base.js') }}"></script>
 
 </body>
