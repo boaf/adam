@@ -1,6 +1,7 @@
 import datetime
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
 
 from adam.db import Base
 
@@ -45,7 +46,23 @@ class User(Base):
     email = Column(String(200))
     openid = Column(String(200))
 
+    api_keys = relationship("APIKey")
+
     def __init__(self, name, email, openid):
         self.name = name
         self.email = email
         self.openid = openid
+
+class APIKey(Base):
+
+    __tablename__ = 'api_keys'
+
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
+    key_id = Column(Integer, nullable=False)
+    key_code = Column(String(100), nullable=False)
+
+    def __init__(self, user_id, key_id, key_code):
+        self.user_id = user_id
+        self.key_id = key_id
+        self.key_code = key_code
