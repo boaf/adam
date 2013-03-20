@@ -3,6 +3,8 @@ import os
 from flask import g, render_template, redirect, request, abort, session, \
     flash, url_for
 
+from flask_openid import COMMON_PROVIDERS
+
 from adam import app, oid
 from adam.cache import Cache
 from adam.db import db_session
@@ -28,7 +30,7 @@ def login():
             return oid.try_login(openid, ask_for=['email', 'fullname',
                                                   'nickname'])
     return render_template('login.html', next=oid.get_next_url(),
-                           error=oid.fetch_error())
+                           error=oid.fetch_error(), providers=COMMON_PROVIDERS)
 
 @oid.after_login
 def create_or_login(resp):

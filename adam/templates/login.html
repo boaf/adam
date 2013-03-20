@@ -3,7 +3,12 @@
 {% block content %}
     <article class="login">
         <header><h3>Sign in</h3></header>
-        <p>You can get your Google OpenID URL by using <a class="google-oid" href="https://www.google.com/accounts/o8/id">google.com/accounts/o8/id</a>, for example.</p>
+        <p>You can get your Google OpenID URL by using one o' deez:</p>
+        <ul>
+        {% for pro, url in providers.iteritems() %}
+            <li><a class="openid-provider" href="{{ url }}">{{ pro }}</a></li>
+        {% endfor %}
+        </ul>
         <form action="" method=post>
             {% if error %}<p class=error><strong>Error:</strong> {{ error }}</p>{% endif %}
         <p>

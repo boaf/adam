@@ -6,7 +6,7 @@
         innerList.slideToggle();
     });
 
-    $('a.google-oid').on('click', function(e) {
+    $('a.openid-provider').on('click', function(e) {
         e.preventDefault();
         var url = $(this).attr('href')
         $('input[name=openid]').val(url);
