@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <article class="list-users">
+        <header><h3>List Users</h3></header>
+        <p>This is only useful if you register two or more openids.</p>
+        <ul>
+        {% for user in users %}
+            <li>{{ user.name }} ({{ user.email }})</li>
+        {% endfor %}
+        </ul>
+    </article>
+{% endblock %}

@@ -35,3 +35,17 @@ class SkillGroup(Base):
 
     def __repr__(self):
         return '<SkillGroup "%s">' % self.name
+
+class User(Base):
+    
+    __tablename__ = 'users'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(60))
+    email = Column(String(200))
+    openid = Column(String(200))
+
+    def __init__(self, name, email, openid):
+        self.name = name
+        self.email = email
+        self.openid = openid
