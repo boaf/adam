@@ -17,4 +17,4 @@ sudo apt-get install python-dev libmysqlclient-dev
 #done
 echo "All good!"
 echo "Enter virtualenv and run:"
-echo ". adam/setup/debian-venv-setup.sh"
+echo ". setup/debian-venv-setup.sh"

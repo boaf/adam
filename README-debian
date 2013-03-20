@@ -3,11 +3,11 @@ An application for funking with EVE data
 
 1. git clone eve@thescoundrels.net:~/code/adam
 
-2. virtualenv adam && cd adam
+2. virtualenv adam; cd adam
 
 3. . setup/debian-prereq.sh
 
-5. . bin/activate && . setup/debian-venv-setup.sh
+5. . bin/activate; . setup/debian-venv-setup.sh
 
 6. python -c 'import adam; adam.db.init_db()'
 
