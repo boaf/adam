@@ -3,12 +3,12 @@ An application for funking with EVE data
 
 1. git clone eve@thescoundrels.net:~/code/adam
 
-2. virtualenv adam
+2. virtualenv adam && cd adam
 
-3. . adam/bin/activate && pip install -r setup/requirements.txt
+3. . bin/activate && pip install -r setup/requirements.txt
 
 4. python -c 'from adam.db import init_db; init_db()'
 
-5. python adam/run.py
+5. python run.py
 
 6. http://localhost:5000
