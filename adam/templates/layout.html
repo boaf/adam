@@ -28,6 +28,13 @@
                     <ul class="nav">
                         <li{% if request.path == '/home' or request.path == '/' %} class="active"{% endif %}><a href="{{ url_for('home') }}">Home</a></li>
                         <li{% if request.path == '/skills' %} class="active"{% endif %}><a href="{{ url_for('skills') }}">Skill List Tree</a></li>
+                    {%- if g.user -%}
+                        <li><a href="{{ url_for('list_users') }}">Users</a></li>
+                        <li><a href="{{ url_for('edit_profile') }}">Profile</a></li>
+                        <li><a href="{{ url_for('logout') }}">Sign Out [{{ g.user.name }}]</a></li>
+                    {%- else -%}
+                        <li><a href="{{ url_for('login') }}">Sign In</a></li>
+                    {%- endif -%}
                     </ul>
                 </nav>
             </div>
