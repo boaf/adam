@@ -7,7 +7,7 @@ An application for funking with EVE data
 
 3. . adam/setup/debian-prereq.sh
 
-5. . adam/bin/activate; . adam/setup/debian-venv-setup.sh
+5. . adam/bin/activate && . adam/setup/debian-venv-setup.sh
 
 6. python -c 'from adam.db import init_db; init_db()'
 
