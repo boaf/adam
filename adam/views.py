@@ -99,8 +99,6 @@ def logout():
 
 @app.route('/list-users')
 def list_users():
-    if g.user is None:
-        return redirect(url_for('home'))
     return render_template('list_users.html', users=User.query.all())
 
 @app.route('/skills')
