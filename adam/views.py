@@ -19,8 +19,8 @@ api = eveapi.EVEAPIConnection(cacheHandler=Cache(debug=True))
 def home():
     return render_template('home.html')
 
-@app.route('/login', methods=['GET', 'POST'])
 @oid.loginhandler
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if g.user is not None:
         return redirect(oid.get_next_url())
