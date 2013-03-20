@@ -27,6 +27,7 @@
                 <nav class="nav-collapse collapse">
                     <ul class="nav">
                         <li{% if request.path == '/home' or request.path == '/' %} class="active"{% endif %}><a href="{{ url_for('home') }}">Home</a></li>
+			<li><a href="{{ url_for('todo') }}">TODO</a></li>
                         <li{% if request.path == '/skills' %} class="active"{% endif %}><a href="{{ url_for('skills') }}">Skill List Tree</a></li>
                     {%- if g.user -%}
                         <li><a href="{{ url_for('list_users') }}">Users</a></li>
