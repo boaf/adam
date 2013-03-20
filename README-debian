@@ -9,6 +9,8 @@ An application for funking with EVE data
 
 5. . adam/bin/activate; . adam/setup/debian-venv-setup.sh
 
-6. python adam/run.py
+6. python -c 'from adam.db import init_db; init_db()'
 
-7. http://localhost:5000
+7. python adam/run.py
+
+8. http://localhost:5000
