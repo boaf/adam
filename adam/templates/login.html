@@ -3,19 +3,19 @@
 {% block content %}
     <article class="login">
         <header><h3>Sign in</h3></header>
-        <p>You can get your Google OpenID URL by using one o' deez:</p>
-        <ul>
-        {% for pro, url in providers.iteritems() %}
-            <li><a class="openid-provider" href="{{ url }}">{{ pro }}</a></li>
-        {% endfor %}
-        </ul>
         <form action="" method=post>
+            <p>You can get your OpenID URL by using one o' deez:</p>
+            <ul>
+            {% for pro, url in providers.iteritems() %}
+                <li><a class="openid-provider" href="{{ url }}">{{ pro }}</a></li>
+            {% endfor %}
+            </ul>
             {% if error %}<p class=error><strong>Error:</strong> {{ error }}</p>{% endif %}
-        <p>
-            <label for="openid">OpenID URL: <input type=text name=openid size=30></label>
-            <input type=submit value="Sign in">
-            <input type=hidden name=next value="{{ next }}">
-        </p>
+            <p>
+                <label for="openid">OpenID URL: <input type=text name=openid size=30></label>
+                <input type=submit value="Sign in">
+                <input type=hidden name=next value="{{ next }}">
+            </p>
         </form>
     </article>
 {% endblock %}
