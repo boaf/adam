@@ -7,7 +7,7 @@ An application for funking with EVE data
 
 3. . bin/activate && pip install -r setup/requirements.txt
 
-4. python -c 'from adam.db import init_db; init_db()'
+4. python -c 'import adam; adam.db.init_db()'
 
 5. python run.py
 
