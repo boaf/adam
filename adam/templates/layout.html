@@ -27,7 +27,6 @@
                 <nav class="nav-collapse collapse">
                     <ul class="nav">
                         <li{% if request.path == '/home' or request.path == '/' %} class="active"{% endif %}><a href="{{ url_for('home') }}">Home</a></li>
-			<li><a href="{{ url_for('todo') }}">TODO</a></li>
                         <li{% if request.path == '/skills' %} class="active"{% endif %}><a href="{{ url_for('skills') }}">Skill List Tree</a></li>
                         <li><a href="{{ url_for('list_users') }}">Users</a></li>
                     {%- if g.user -%}
@@ -46,6 +45,16 @@
         {% block content %}
         {% endblock %}
     </section>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
 
     <script src="{{ url_for('static', filename='js/less.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

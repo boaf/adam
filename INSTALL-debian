@@ -1,6 +1,3 @@
-Adam
-An application for funking with EVE data
-
 0. CLONE
 
 1. virtualenv adam && cd adam
