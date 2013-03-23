@@ -73,7 +73,7 @@ class Character(Base):
     
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, foreignKey('users.id'), nullable=False)
-    key_code = Column(Integer, foreignkey('api_keys.key_code', nullable=False)
+    key_code = Column(Integer, foreignKey('api_keys.key_code', nullable=False)
     char_id = Column(Integer, nullable=False)
     
     def __init__(self, user_id, key_code, char_id)
