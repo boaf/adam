@@ -66,17 +66,3 @@ class APIKey(Base):
         self.user_id = user_id
         self.key_id = key_id
         self.key_code = key_code
-
-class Character(Base):
-
-    __tablename__ = 'characters'
-    
-    id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, foreignKey('users.id'), nullable=False)
-    key_code = Column(Integer, foreignKey('api_keys.key_code', nullable=False)
-    char_id = Column(Integer, nullable=False)
-    
-    def __init__(self, user_id, key_code, char_id)
-        self.user_id = user_id
-        self.key_code = key_code
-        self.char_id = char_id

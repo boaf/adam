@@ -112,6 +112,3 @@ def humans_txt():
     response.content_type = "text/plain"
     return response
 
-@app.route('/todo')
-def todo():
-    return render_template('todo.html')
