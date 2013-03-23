@@ -1,14 +1,14 @@
 Adam
 An application for funking with EVE data
 
-1. git clone eve@thescoundrels.net:~/code/adam
+0. CLONE
 
-2. virtualenv adam && cd adam
+1. virtualenv adam && cd adam
 
-3. . bin/activate && pip install -r setup/requirements.txt
+2. . bin/activate && pip install -r setup/requirements.txt
 
-4. python -c 'import adam; adam.db.init_db()'
+3. python -c 'import adam; adam.db.init_db()'
 
-5. python run.py
+4. python run.py
 
-6. http://localhost:5000
+5. http://localhost:5000
