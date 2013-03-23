@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <article class="skill-list">
+        <header><h3>Character Sheet</h3></header>
+        <div class="content">
+        {%- if  -%}
+            <ul class="expandable">
+            {%- for group in skilltree.skillGroups -%}
+                <li>
+                    <header class="skill-group">{{ group.groupName }}: {{ group.skills|length }} skills</header>
+                    <ul>
+                    {%- for skill in group.skills -%}
+                        <li><strong>{{ skill.typeName }}</strong></li>
+                    {%- endfor -%}
+                    </ul>
+                </li>
+            {%- endfor -%}
+            </ul>
+        {%- endif -%}
+        </div>
+    </article>
+{% endblock %}
