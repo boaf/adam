@@ -60,7 +60,7 @@ class APIKey(Base):
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
     key_id = Column(Integer, nullable=False)
-    key_code = Column(String(100), nullable=False)
+    key_code = Column(String(64), nullable=False)
 
     def __init__(self, user_id, key_id, key_code):
         self.user_id = user_id
